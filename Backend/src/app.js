@@ -7,7 +7,10 @@ const userRoutes = require('./routes/user.routes')
 const hackathonRoutes = require('./routes/hackathon.routes')
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: [
+        'http://localhost:5173',
+        'https://hackathon-registration-portal-peach.vercel.app'
+    ],
     credentials: true
 }));
 
