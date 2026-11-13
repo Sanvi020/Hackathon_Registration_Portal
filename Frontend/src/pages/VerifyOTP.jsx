@@ -8,7 +8,6 @@ function VerifyOTP() {
     const navigate = useNavigate();
 
     const email = location.state?.email;
-
     const [otp, setOtp] = useState('');
     const [error, setError] = useState('');
     const [message, setMessage] = useState('');
