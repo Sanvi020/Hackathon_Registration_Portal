@@ -8,12 +8,15 @@ const userRoutes = require('./routes/user.routes');
 const hackathonRoutes = require('./routes/hackathon.routes');
 
 app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'https://hackathon-registration-portal-peach.vercel.app',
-        'https://hackathon-registration-portal-pmel2q4ng-sanvi23.vercel.app',
-        'https://hackathon-registration-portal-ce2o3tgxb-sanvi23.vercel.app'
-    ],
+    origin: (origin, callback) => {
+        const allowed =
+            !origin ||
+            origin === 'http://localhost:5173' ||
+            origin === 'https://hackathon-registration-portal-peach.vercel.app' ||
+            /^https:\/\/hackathon-registration-portal-[a-z0-9-]+-sanvi23\.vercel\.app$/.test(origin);
+
+        callback(null, allowed);
+    },
     credentials: true
 }));
 app.use(express.json());
