@@ -40,7 +40,7 @@ function Login() {
             localStorage.setItem('token', token);
 
             const profile = await API.get(
-                'http://https://hackathon-registration-portal-hc79.onrender.com/api/user/me',
+                'https://hackathon-registration-portal-hc79.onrender.com/api/user/me',
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

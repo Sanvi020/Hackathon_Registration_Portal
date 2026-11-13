@@ -35,7 +35,7 @@ function Signup() {
             setError('');
 
             await API.post(
-                'http://https://hackathon-registration-portal-hc79.onrender.com/api/auth/signup',
+                'https://hackathon-registration-portal-hc79.onrender.com/api/auth/signup',
                 formData
             );
 
