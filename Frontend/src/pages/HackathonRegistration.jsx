@@ -78,7 +78,7 @@ function HackathonRegistration() {
             const token = localStorage.getItem('token');
 
             const response = await API.post(
-                'http://localhost:3000/api/hackathon/register',
+                'http://https://hackathon-registration-portal-hc79.onrender.com/api/hackathon/register',
                 {
                     ...formData,
                     teamSize: Number(formData.teamSize)

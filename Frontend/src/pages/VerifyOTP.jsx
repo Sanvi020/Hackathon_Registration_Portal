@@ -21,7 +21,7 @@ function VerifyOTP() {
             setError('');
 
             await API.post(
-                'http://localhost:3000/api/auth/verify-otp',
+                'http://https://hackathon-registration-portal-hc79.onrender.com/api/auth/verify-otp',
                 { email, otp }
             );
 
@@ -40,7 +40,7 @@ function VerifyOTP() {
             setMessage('');
 
             const response = await API.post(
-                'http://localhost:3000/api/auth/resend-otp',
+                'http://https://hackathon-registration-portal-hc79.onrender.com/api/auth/resend-otp',
                 { email }
             );
 

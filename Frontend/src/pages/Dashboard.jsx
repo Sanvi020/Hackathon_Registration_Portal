@@ -19,7 +19,7 @@ function Dashboard() {
                 const token = localStorage.getItem('token');
 
                 const response = await API.get(
-                    'http://localhost:3000/api/hackathon/my-entry',
+                    'http://https://hackathon-registration-portal-hc79.onrender.com/api/hackathon/my-entry',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`

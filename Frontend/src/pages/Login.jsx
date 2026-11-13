@@ -31,7 +31,7 @@ function Login() {
             setError('');
 
             const response = await API.post(
-                'http://localhost:3000/api/auth/login',
+                'https://hackathon-registration-portal-hc79.onrender.com',
                 formData
             );
 
@@ -40,7 +40,7 @@ function Login() {
             localStorage.setItem('token', token);
 
             const profile = await API.get(
-                'http://localhost:3000/api/user/me',
+                'http://https://hackathon-registration-portal-hc79.onrender.com/api/user/me',
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

@@ -10,11 +10,11 @@ const hackathonRoutes = require('./routes/hackathon.routes');
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        'https://hackathon-registration-portal-peach.vercel.app'
+        'https://hackathon-registration-portal-peach.vercel.app',
+        'https://hackathon-registration-portal-pmel2q4ng-sanvi23.vercel.app'
     ],
     credentials: true
 }));
-
 app.use(express.json());
 
 app.get('/', (req, res) => {
